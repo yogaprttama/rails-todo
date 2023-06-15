@@ -1,0 +1,18 @@
+<% if notice.present? %>
+  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+    <%= notice %>
+  </p>
+<% end %>
+
+<h1 class="font-bold text-2xl">Rails TODO</h1>
+
+<div class="mt-4">
+  <%= render "form", todo: @todo %>
+</div>
+
+<div id="todos">
+  <h1 class="font-bold text-lg mb-7">Todos</h1>
+  <div class="px-5" data-controller="todos">
+    <%= render @todos %>
+  </div>
+</div>
